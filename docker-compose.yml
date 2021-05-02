@@ -1,7 +1,7 @@
 version: '1'
 services:
   app:
-    container_name: work_in_machine
+    container_name: docker_testing
     restart: always
     build: .
     ports:
