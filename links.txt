@@ -1,0 +1,4 @@
+docker image : docker pull abdelhamidazizi/work_in_machine:master-979daeb
+deployment back-end : 
+https://work-in-machine.herokuapp.com/
+https://work-in-machine.herokuapp.com/byId/id
