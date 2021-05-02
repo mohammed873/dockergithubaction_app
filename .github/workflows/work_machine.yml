@@ -25,8 +25,8 @@ jobs:
       with:
         image: team/docker_testing
         registry: docker.io
-        username: ${{ elhachimimohammed }}
-        password: ${{ med0618228133}}
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASS }}
     - uses: akhileshns/heroku-deploy@v3.12.12 
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
