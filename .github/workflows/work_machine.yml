@@ -23,10 +23,10 @@ jobs:
     - name: push to docker
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: abdelhamidazizi/work_in_machine
+        image: team/docker_testing
         registry: docker.io
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASS }}
+        username: ${{ elhachimimohammed }}
+        password: ${{ med0618228133}}
     - uses: akhileshns/heroku-deploy@v3.12.12 
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
