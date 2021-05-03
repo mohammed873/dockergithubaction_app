@@ -3,6 +3,8 @@ to run this project you need first to have docker alraedy installed and configur
 </br>
 first you need to clone the repo , once you finish open it using CMD or gitbash terminal and run the following command line , "docker compose up"
 </br>
+or paste this command "docker push elhachimimohammed/docker:tagname"
+</br>
 deployment back-end : </br>
 get all </br>
 https://work-in-machine.herokuapp.com/  </br>
