@@ -23,15 +23,15 @@ jobs:
     - name: push to docker
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: team/docker_testing
+        image: elhachimimohammed/docker
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASS }}
     - uses: akhileshns/heroku-deploy@v3.12.12 
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: "work-in-machine" 
-        heroku_email: "hamoda.compte@gmail.com"
+        heroku_app_name: "dockergithub" 
+        heroku_email: "melhachimi514@@gmail.com"
         usedocker: true
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
