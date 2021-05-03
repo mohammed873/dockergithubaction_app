@@ -6,8 +6,7 @@ name: Node.js CI
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  
 
 jobs:
   build:
@@ -16,11 +15,24 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
+        node-version: [12.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v2
+    - name: push to docker
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: elhachimimohammed/docker
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASS }}
+    - uses: akhileshns/heroku-deploy@v3.12.12 
+      with:
+        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_app_name: "dockergithub" 
+        heroku_email: "melhachimi514@@gmail.com"
+        usedocker: true
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
