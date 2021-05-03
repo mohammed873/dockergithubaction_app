@@ -1,11 +1,12 @@
 FROM node:latest
 
-ADD *.json ./
-
 WORKDIR /app
 
-#RUN npm install
+COPY *.json ./
 
-ADD . .
+COPY . .
 
-CMD npm install; npm start
+#RUN npm install express
+
+CMD npm install; npm install express; npm start
+#CMD ["node", "server.js"]
