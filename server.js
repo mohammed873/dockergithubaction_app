@@ -15,5 +15,5 @@ app.get('/byId/:id',(req,res)=>{
     res.status(200).send(user)
 })
 const port = process.env.PORT || 4000
-app.listen(port,()=>console.log('server is running hhhh'))
+app.listen(port,()=>console.log('server is running '))
 module.exports = app
